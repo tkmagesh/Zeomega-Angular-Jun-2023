@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter/greeter.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   /* Register the UI entities (component, pipe & directive) of the module */
   declarations: [
     AppComponent,
-    GreeterComponent
+    GreeterComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule
@@ -17,7 +19,8 @@ import { GreeterComponent } from './greeter/greeter.component';
   providers: [],
   bootstrap: [
     AppComponent,
-    GreeterComponent
+    GreeterComponent,
+    CalculatorComponent
   ]
 })
 export class AppModule { }

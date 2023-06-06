@@ -37,3 +37,18 @@
 <button>Divide</button>
 <div>[Result]</div>
 ```
+
+## Calculator-2 Assignment ##
+<h3>Calculator-2</h3>
+<hr>
+<input type="number" name="" id="">
+<select name="" id="">
+<option value="">--Select--</option>
+<option value="add">Add</option>
+<option value="subtract">Subtract</option>
+<option value="multiply">Multiply</option>
+<option value="divide">Divide</option>
+</select>
+<input type="number" name="" id="">
+<button>Calculate</button>
+<div>[Result]</div>

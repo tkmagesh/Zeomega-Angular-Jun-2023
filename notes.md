@@ -42,3 +42,10 @@ npm install -g @angular/cli
 
 ## JavaScript Suppliment Material ##
 - https://bit.ly/javascript-training-videos
+
+## Day-2 Homework ##
+- Learn the following array methods
+    - map
+    - filter
+    - reduce
+    - forEach

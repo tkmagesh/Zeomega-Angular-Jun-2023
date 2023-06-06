@@ -1,10 +1,13 @@
 <h3>Greeter!</h3>
 <label for="">User Name :</label>
-<input type="text" #txtUserName>
-<button (click)="onBtnGreetClick(txtUserName.value)">Greet</button>
-<div>{{message}}</div>
+<!-- version-1 -->
 <!-- 
-    When the user clicks the "Greet" button
-        display '[default greet message]' in the div
+    <input type="text" #txtUserName>
+    <button (click)="onBtnGreetClick(txtUserName.value)">Greet</button> 
+-->
 
- -->
+<!-- version-2 -->
+<input type="text" #txtUserName (input)="userName = txtUserName.value">
+<button (click)="onBtnGreetClick()">Greet</button>
+
+<div>{{message}}</div>

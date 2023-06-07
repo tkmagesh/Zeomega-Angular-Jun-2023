@@ -6,6 +6,7 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
 import { ProductsComponent } from './products/products.component';
+import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 
 @NgModule({
   /* Register the UI entities (component, pipe & directive) of the module */
@@ -14,7 +15,8 @@ import { ProductsComponent } from './products/products.component';
     GreeterComponent,
     CalculatorComponent,
     Calculator2Component,
-    ProductsComponent
+    ProductsComponent,
+    SalaryCalculatorComponent
   ],
   imports: [
     BrowserModule

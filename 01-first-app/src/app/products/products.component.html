@@ -9,5 +9,8 @@
     <button (click)="onBtnAddNewClick(txtNewProductName.value)">Add New</button>
 </div>
 <ul>
-    <li *ngFor="let product of products">{{product}}</li>
+    <li *ngFor="let product of products; index as idx">
+        <span>{{product}}</span>
+        <button (click)="onBtnRemoveClick(idx)">X</button>
+    </li>
 </ul>

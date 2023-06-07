@@ -13,4 +13,13 @@ export class ProductsComponent {
   onBtnAddNewClick(newProductName: string) {
     this.products.push(newProductName)
   }
+
+  /* 
+  onBtnRemoveClick(productToRemove : string){
+    this.products.splice(this.products.indexOf(productToRemove), 1)
+  } 
+  */
+  onBtnRemoveClick(idx: number) {
+    this.products.splice(idx, 1)
+  }
 }

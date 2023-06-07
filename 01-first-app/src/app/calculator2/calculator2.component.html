@@ -1,0 +1,13 @@
+<h3>Calculator-2</h3>
+<hr>
+<input type="number" #txtN1 (input)="n1 = txtN1.value">
+<select #selectOperation (change)="operation = selectOperation.value">
+    <option value="">--Select--</option>
+    <option value="add">Add</option>
+    <option value="subtract">Subtract</option>
+    <option value="multiply">Multiply</option>
+    <option value="divide">Divide</option>
+</select>
+<input type="number" #txtN2 (input)="n2 = txtN2.value">
+<button (click)="onBtnCalculateClick()">Calculate</button>
+<div>{{result}}</div>

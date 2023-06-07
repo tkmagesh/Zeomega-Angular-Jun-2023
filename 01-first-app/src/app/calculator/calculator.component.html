@@ -7,4 +7,9 @@
 <button (click)="onBtnSubtractClick()">Subtract</button>
 <button (click)="onBtnMultiplyClick()">Multiply</button>
 <button (click)="onBtnDivideClick()">Divide</button>
-<div>{{result}}</div>
+<div 
+    *ngIf="result !== 0" 
+    [ngClass]="{negative : result < 0, positive : result >= 0}"
+>
+    {{result | currency:'INR'}}
+</div>

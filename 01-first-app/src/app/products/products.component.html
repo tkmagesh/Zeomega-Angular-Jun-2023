@@ -1,0 +1,13 @@
+<h3>Products</h3>
+<div>
+    <span>Products Count :</span>
+    <span>{{products.length}}</span>
+</div>
+<div>
+    <label for="">Product : </label>
+    <input type="text" #txtNewProductName >
+    <button (click)="onBtnAddNewClick(txtNewProductName.value)">Add New</button>
+</div>
+<ul>
+    <li *ngFor="let product of products">{{product}}</li>
+</ul>

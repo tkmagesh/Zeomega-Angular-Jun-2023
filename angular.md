@@ -10,6 +10,14 @@
 ### Directive ###
 - Encapsulates the DOM manipulation logic
 - A directive = component without template
+- Types of Directives
+    - Attribute directive
+        - Manipulate the attributes of existing DOM nodes
+        - DONOT change the structure of the DOM tree
+        - usage : **[directive_name]**
+    - Structural directive
+        - Change the structure of the DOM tree by adding / removing DOM nodes
+        - usage : *directive_name
 
 ### Pipe ###
 - Encapsulates any data transformation logic for presenation

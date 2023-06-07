@@ -5,9 +5,30 @@
     <span>{{ title }} app is running!</span>
   </div> 
 -->
-<app-salary-calculator></app-salary-calculator>
-<app-salary-calculator></app-salary-calculator>
-<app-greeter></app-greeter>
-<app-calculator></app-calculator>
-<app-calculator2></app-calculator2>
-<app-products></app-products>
+<h1>My App</h1>
+<div>
+  <button (click)="setUserChoice(userChoiceEnum.greeter)">Greeter</button>
+  <button (click)="setUserChoice(userChoiceEnum.calculator)">Calculator</button>
+  <button (click)="setUserChoice(userChoiceEnum.calculator2)">Calculator-2</button>
+  <button (click)="setUserChoice(userChoiceEnum.products)">Products</button>
+  <button (click)="setUserChoice(userChoiceEnum.salaryCalculator)">Salary Calculator</button>
+</div>
+<div>
+  User Choice : {{userChoice}}
+</div>
+<!-- Using ngIf -->
+<!-- 
+  <app-salary-calculator *ngIf="userChoice === userChoiceEnum.salaryCalculator"></app-salary-calculator>
+  <app-greeter *ngIf="userChoice === userChoiceEnum.greeter"></app-greeter>
+  <app-calculator *ngIf="userChoice === userChoiceEnum.calculator"></app-calculator>
+  <app-calculator2 *ngIf="userChoice === userChoiceEnum.calculator2"></app-calculator2>
+  <app-products *ngIf="userChoice === userChoiceEnum.products"></app-products>
+ -->
+ <!-- using ngSwitch -->
+ <div [ngSwitch]="userChoice">
+  <app-salary-calculator *ngSwitchCase="userChoiceEnum.salaryCalculator"></app-salary-calculator>
+  <app-greeter *ngSwitchCase="userChoiceEnum.greeter"></app-greeter>
+  <app-calculator *ngSwitchCase="userChoiceEnum.calculator"></app-calculator>
+  <app-calculator2 *ngSwitchCase="userChoiceEnum.calculator2"></app-calculator2>
+  <app-products *ngSwitchCase="userChoiceEnum.products"></app-products>
+ </div>

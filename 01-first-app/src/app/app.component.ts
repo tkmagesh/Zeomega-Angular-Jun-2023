@@ -1,4 +1,13 @@
 import { Component } from '@angular/core';
+import { EnumType } from 'typescript';
+
+enum UserChoiceEnum {
+  greeter,
+  calculator,
+  calculator2,
+  products,
+  salaryCalculator
+}
 
 @Component({
   selector: 'app-root',
@@ -6,6 +15,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  userChoice: UserChoiceEnum = 0;
+
+  get userChoiceEnum() : typeof UserChoiceEnum  {
+    return UserChoiceEnum;
+  }
+
+  setUserChoice(userChoice: UserChoiceEnum) {
+    this.userChoice = userChoice;
+  }
+
+
   
   //state
   title = '01-first-app';

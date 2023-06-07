@@ -10,4 +10,4 @@
 </select>
 <input type="number" #txtN2 (input)="n2 = txtN2.value">
 <button (click)="onBtnCalculateClick()">Calculate</button>
-<div>{{result}}</div>
+<app-calculator-result [data]="result"></app-calculator-result>

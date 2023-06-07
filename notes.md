@@ -22,3 +22,14 @@ npm install -g @angular/cli
     - filter
     - reduce
     - forEach
+
+## Books ##
+1. Agile Principles Patterns & Practices
+2. Refactoring 
+3. Head First Design Patterns
+4. Head First OOAD
+5. Refactoring to Patterns
+6. Domain Driven Design
+7. Growing Object Oriented Software Guided By Tests
+8. Structure and Interpretation of Computer Programs
+

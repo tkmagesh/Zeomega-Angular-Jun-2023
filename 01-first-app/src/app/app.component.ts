@@ -17,9 +17,11 @@ enum UserChoiceEnum {
 export class AppComponent {
   userChoice: UserChoiceEnum = 0;
 
-  get userChoiceEnum() : typeof UserChoiceEnum  {
+  /* get userChoiceEnum() : typeof UserChoiceEnum  {
     return UserChoiceEnum;
-  }
+  } */
+  
+  readonly userChoiceEnum = UserChoiceEnum
 
   setUserChoice(userChoice: UserChoiceEnum) {
     this.userChoice = userChoice;

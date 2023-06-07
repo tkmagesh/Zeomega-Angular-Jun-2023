@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 import { SalaryCalculatorModel } from './salary-calculator/salary-calculator-model';
 import { SalaryCalculatorModel2 } from './salary-calculator/salary-calculator-model-2';
+import { CalculatorResultComponent } from './calculator-result/calculator-result.component';
 
 @NgModule({
   /* Register the UI entities (component, pipe & directive) of the module */
@@ -18,7 +19,8 @@ import { SalaryCalculatorModel2 } from './salary-calculator/salary-calculator-mo
     CalculatorComponent,
     Calculator2Component,
     ProductsComponent,
-    SalaryCalculatorComponent
+    SalaryCalculatorComponent,
+    CalculatorResultComponent
   ],
   imports: [
     BrowserModule

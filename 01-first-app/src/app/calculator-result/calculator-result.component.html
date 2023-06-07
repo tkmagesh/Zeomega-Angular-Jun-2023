@@ -1,0 +1,3 @@
+<div *ngIf="result !== 0" [ngClass]="{negative : result < 0, positive : result >= 0}">
+    {{result | currency:'INR'}}
+</div>

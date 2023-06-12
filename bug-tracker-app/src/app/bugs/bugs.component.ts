@@ -14,7 +14,8 @@ interface Bug {
 })
 export class BugsComponent {
   public sortAttrName : string = '';
-
+  public sortByDesc : boolean = false;
+  
   bugs : Bug[] = [
     { id : 1, name : 'Server communication failure', isClosed : false, createdAt : new Date("01-Jan-2023")},
     { id: 2, name: 'Data integrity checks failed', isClosed: true, createdAt: new Date("01-Jan-2021") },

@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BugsComponent } from './bugs/bugs.component';
+import { TrimTextPipe } from './bugs/pipes/trimText.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BugsComponent
+    BugsComponent,
+    TrimTextPipe
   ],
   imports: [
     BrowserModule,

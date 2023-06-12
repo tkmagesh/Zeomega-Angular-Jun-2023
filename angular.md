@@ -67,13 +67,13 @@
 - ng new bug-tracker-app
 
 ### Use Cases ###
-1. Add new bugs
-2. List the added bugs
-3. Remove the added bugs
-4. Toggle the 'closed' status of any bug
-5. Remove all 'closed' bugs
-6. Display stats (# of closed bugs / total # of bugs)
-7. Improvise the bug display
+1. Add new bugs (done)
+2. List the added bugs (done)
+3. Remove the added bugs (done)
+4. Toggle the 'closed' status of any bug (done)
+5. Remove all 'closed' bugs (done)
+6. Display stats (# of closed bugs / total # of bugs) (done)
+7. Improvise the bug display (done)
 8. Sort the bugs
 9. Persist the bugs in the localStorage
 10. Display createdAt as 'elapsed'

@@ -15,7 +15,7 @@ interface Bug {
 export class BugsComponent {
 
   bugs : Bug[] = [];
-  
+
   private _currentBugId : number = 0;
 
   onBtnAddNewClick(newBugName : string){
@@ -26,5 +26,16 @@ export class BugsComponent {
       isClosed : false
     }
     this.bugs.push(newBug)
+  }
+
+  onBugNameClick(bugToToggle : Bug){
+    bugToToggle.isClosed = !bugToToggle.isClosed
+  }
+
+  onBtnRemoveClick(bugToRemove : Bug){
+    this.bugs.splice(this.bugs.indexOf(bugToRemove), 1)
+  }
+  onBtnRemoveClosedClick(){
+    this.bugs = this.bugs.filter(bug => !bug.isClosed)
   }
 }

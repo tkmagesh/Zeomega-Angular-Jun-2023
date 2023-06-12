@@ -17,6 +17,7 @@ export class BugsComponent {
   bugs : Bug[] = [];
 
   private _currentBugId : number = 0;
+  
 
   onBtnAddNewClick(newBugName : string){
     const newBug : Bug = {
@@ -37,5 +38,9 @@ export class BugsComponent {
   }
   onBtnRemoveClosedClick(){
     this.bugs = this.bugs.filter(bug => !bug.isClosed)
+  }
+
+  getClosedCount() : number {
+    return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
   }
 }

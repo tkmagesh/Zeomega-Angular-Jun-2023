@@ -13,6 +13,7 @@ interface Bug {
   styleUrls: ['./bugs.component.css']
 })
 export class BugsComponent {
+  public sortAttrName : string = '';
 
   bugs : Bug[] = [
     { id : 1, name : 'Server communication failure', isClosed : false, createdAt : new Date("01-Jan-2023")},

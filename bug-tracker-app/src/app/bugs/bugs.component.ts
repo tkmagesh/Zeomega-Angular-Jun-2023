@@ -14,7 +14,12 @@ interface Bug {
 })
 export class BugsComponent {
 
-  bugs : Bug[] = [];
+  bugs : Bug[] = [
+    { id : 1, name : 'Server communication failure', isClosed : false, createdAt : new Date("01-Jan-2023")},
+    { id: 2, name: 'Data integrity checks failed', isClosed: true, createdAt: new Date("01-Jan-2021") },
+    { id: 3, name: 'User actions not recognized', isClosed: true, createdAt: new Date("01-Jan-2020") },
+    { id: 3, name: 'Application not responding', isClosed: false, createdAt: new Date("01-Jan-2022") },
+  ];
 
   private _currentBugId : number = 0;
   

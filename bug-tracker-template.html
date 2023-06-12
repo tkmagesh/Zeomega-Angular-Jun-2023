@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bug Tracker</title>
     <style>
+        /* styles.css */
         body{
             margin-left: 50px;
         }
+        /* bugs.component.css */
         section{
             margin-bottom: 10px;
         }
@@ -20,6 +22,11 @@
         .bugname, .stats {
             font-size: 18pt;
         }
+
+        .bugname{
+            cursor: pointer;
+        }
+
         ol{
             width: 500px;
             list-style: none;
@@ -38,8 +45,10 @@
     </style>
 </head>
 <body>
+    <!-- app.component.html -->
     <h1>Bug Tracker</h1>
     <hr>
+    <!-- bugs.component.html -->
     <section class="stats">
         <span class="closed">1</span>
         <span>/</span>

@@ -47,6 +47,7 @@
 ```
 
 ## Calculator-2 Assignment ##
+```
 <h3>Calculator-2</h3>
 <hr>
 <input type="number" name="" id="">
@@ -60,3 +61,24 @@
 <input type="number" name="" id="">
 <button>Calculate</button>
 <div>[Result]</div>
+```
+
+## Bug Tracker ##
+- ng new bug-tracker-app
+
+### Use Cases ###
+1. Add new bugs
+2. List the added bugs
+3. Remove the added bugs
+4. Toggle the 'closed' status of any bug
+5. Remove all 'closed' bugs
+6. Display stats (# of closed bugs / total # of bugs)
+7. Improvise the bug display
+8. Sort the bugs
+9. Persist the bugs in the localStorage
+10. Display createdAt as 'elapsed'
+11. Persist the bugs in the server
+12. Implement data validations
+13. Make the bugs accessible using unique urls (routing)
+14. Implement 'Projects' module
+15. Package & deployment

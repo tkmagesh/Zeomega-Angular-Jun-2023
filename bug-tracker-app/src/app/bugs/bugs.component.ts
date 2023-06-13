@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Bug } from './models/bug';
+import { BugStorageService } from './services/bugStorage.service';
 
 
 
@@ -17,25 +18,17 @@ export class BugsComponent {
     
   ];
 
-  private _currentBugId : number = 0;
-  
-
-  constructor(){
-    /* this.bugs = [
-      { id: 1, name: 'Server communication failure', isClosed: false, createdAt: new Date("01-Jan-2023") },
-      { id: 2, name: 'Data integrity checks failed', isClosed: true, createdAt: new Date("01-Jan-2021") },
-      { id: 3, name: 'User actions not recognized', isClosed: true, createdAt: new Date("01-Jan-2020") },
-      { id: 4, name: 'Application not responding', isClosed: false, createdAt: new Date("01-Jan-2022") },
-    ] */
-    this._currentBugId = 4
+  constructor(public bugStorage : BugStorageService){
+    this.bugs = this.bugStorage.getAll()
   }
   onBtnAddNewClick(newBugName : string){
-    const newBug : Bug = {
-      id : ++this._currentBugId,
+    const newBugData : Bug = {
+      id : 0,
       name : newBugName,
       createdAt : new Date(),
       isClosed : false
     }
+    const newBug = this.bugStorage.save(newBugData)
     // mutation
     // this.bugs.push(newBug)
 
@@ -48,20 +41,24 @@ export class BugsComponent {
 
     //immutability
     const toggledBug = { ...bugToToggle, isClosed : !bugToToggle.isClosed}
+    this.bugStorage.save(toggledBug)
     this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug)
   }
 
   onBtnRemoveClick(bugToRemove : Bug){
     // this.bugs.splice(this.bugs.indexOf(bugToRemove), 1)
     //immutability
+    this.bugStorage.remove(bugToRemove)
     this.bugs = this.bugs.filter(bug => bug.id != bugToRemove.id)
   }
   onBtnRemoveClosedClick(){
-    this.bugs = this.bugs.filter(bug => !bug.isClosed)
+
+    this.bugs.filter(bug => bug.isClosed)
+      .forEach(closedBug => this.onBtnRemoveClick(closedBug))
   }
 
-  getClosedCount() : number {
+/*   getClosedCount() : number {
     console.log('getClosedCount - triggered')
     return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
-  }
+  } */
 }

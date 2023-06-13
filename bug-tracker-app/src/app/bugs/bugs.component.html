@@ -14,12 +14,7 @@
 </section>
 
 <!-- BugEdit Component -->
-<section class="edit">
-    <label for="">Bug Name :</label>
-    <input type="text" #txtNewBugName (input)="newBugName = txtNewBugName.value">
-    <span> [ {{newBugName.length}} ] </span>
-    <button (click)="onBtnAddNewClick(newBugName)">Add New</button>
-</section>
+<app-bug-edit (bugCreate)="onNewBugCreate($event)"></app-bug-edit>
 <section class="list">
     <ol>
         <li *ngFor="let bug of (bugOperations.bugs | sort:sortAttrName:sortByDesc)">

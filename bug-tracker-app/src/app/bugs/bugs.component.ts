@@ -12,12 +12,13 @@ import { BugOperationsService } from './services/bugOperations.service';
 export class BugsComponent {
   public sortAttrName : string = '';
   public sortByDesc : boolean = false;
-  public newBugName : string = '';
+  
 
   constructor(public bugOperations : BugOperationsService){
     this.bugOperations.loadAll()
   }
-  onBtnAddNewClick(newBugName : string){
+
+  onNewBugCreate(newBugName : string){
     this.bugOperations.createNew(newBugName)
   }
 

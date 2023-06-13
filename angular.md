@@ -82,3 +82,7 @@
 13. Make the bugs accessible using unique urls (routing)
 14. Implement 'Projects' module
 15. Package & deployment
+
+
+### Pure Function ###
+- a function whose invocation can be replaced with the result WITHOUT affecting the final outcome

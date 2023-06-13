@@ -2,10 +2,12 @@ import { Pipe, PipeTransform } from "@angular/core";
 
 
 @Pipe({
-    name : "sort"
+    name : "sort",
+    pure : true
 })
 export class SortPipe<T> implements PipeTransform {
     transform(list: T[], attrName : keyof T, descending : boolean = false) : T[] {
+        console.log('sort.transform triggered')
         const isDesc = descending ? -1 : 1;
         if (!list || !list.length || attrName === '') return list;
         return list.sort((a, b) => {

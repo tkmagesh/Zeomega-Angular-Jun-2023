@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BugsComponent } from './bugs/bugs.component';
 import { TrimTextPipe } from './bugs/pipes/trimText.pipe';
 import { SortPipe } from './bugs/pipes/sort.pipe';
+import { ClosedCountPipe } from './bugs/pipes/closedCount.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BugsComponent,
+    ClosedCountPipe,
     TrimTextPipe,
-    SortPipe
+    SortPipe,
   ],
   imports: [
     BrowserModule,

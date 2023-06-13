@@ -75,7 +75,7 @@
 6. Display stats (# of closed bugs / total # of bugs) (done)
 7. Improvise the bug display (done)
 8. Sort the bugs (done)
-9. Persist the bugs in the localStorage
+9. Persist the bugs in the localStorage (done)
     ```
         window.localStorage (object)
             - key-value store
@@ -94,7 +94,7 @@
                 * read & write individual bugs
                 * use JSON.stringify() and JSON.parse() for serialization & deserialization
     ```
-10. Display createdAt as 'elapsed'
+10. Display createdAt as 'elapsed' (done)
 11. Persist the bugs in the server
 12. Implement data validations
 13. Make the bugs accessible using unique urls (routing)

@@ -51,7 +51,8 @@
     }
     window['addAsyncPromise'] = addAsyncPromise
 
-    
+    //Promise Client
+
     /* function addAsyncPromiseClient() {
         console.log(`[@client] invoking the service`)
         const p = addAsyncPromise(100, 200);
@@ -114,3 +115,41 @@
     window['addAsyncAwaitPromiseClient2'] = addAsyncAwaitPromiseClient2 
    
 })()
+
+/* 
+//Promise Chaining
+// part - 1
+const p2 = p.then(function (result) {
+    console.log(`[@client] result = ${result}`)
+    return new Promise((resolveFn, rejectFn) => {
+        setTimeout(() => {
+            const doubleResult = result * 2
+            resolveFn(doubleResult)
+        }, 4000)
+    })
+})
+
+// part - 2
+const p3 = p.then(function (result) {
+    console.log(`[@client] result = ${result}`)
+    const doubleResult = result * 2
+    return new Promise((resolveFn, rejectFn) => {
+        resolveFn(doubleResult)
+    })
+})
+
+//part - 3
+const p4 = p.then(function (result) {
+    console.log(`[@client] result = ${result}`)
+    const doubleResult = result * 2
+    return Promise.resolve(doubleResult)
+})
+
+//part - 4
+const p5 = p.then(function (result) {
+    console.log(`[@client] result = ${result}`)
+    const doubleResult = result * 2
+    return doubleResult
+})
+
+*/

@@ -104,3 +104,6 @@
 
 ### Pure Function ###
 - a function whose invocation can be replaced with the result WITHOUT affecting the final outcome
+
+### Async Programming ###
+- Async Operation - An operation that is initiated but not waited for its completion

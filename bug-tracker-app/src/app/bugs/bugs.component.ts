@@ -2,6 +2,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Bug } from './models/bug';
 import { BugStorageService } from './services/bugStorage.service';
 import { BugOperationsService } from './services/bugOperations.service';
+import { BugApiService } from './services/bugApi.service';
+import { Observable, from } from 'rxjs';
 
 @Component({
   selector: 'app-bugs',
@@ -13,7 +15,6 @@ export class BugsComponent {
   public sortAttrName : string = '';
   public sortByDesc : boolean = false;
   
-
   constructor(public bugOperations : BugOperationsService){
     this.bugOperations.loadAll()
   }

@@ -6,9 +6,9 @@ import { Bug } from "../../models/bug";
     template : `
         <section class="stats">
             <!-- <span class="closed">{{getClosedCount()}}</span> -->
-            <span class="closed">{{bugs | closedCount}}</span>
+            <span class="closed">{{bugs! | closedCount}}</span>
             <span> / </span>
-            <span>{{bugs.length}}</span>
+            <span>{{bugs?.length}}</span>
         </section>
     `,
     styleUrls : ['bug-stats.component.css'],
@@ -16,5 +16,5 @@ import { Bug } from "../../models/bug";
 })
 export class BugStatsComponent{
     @Input('data')
-    bugs : Bug[] = []
+    bugs? : Bug[] = []
 }

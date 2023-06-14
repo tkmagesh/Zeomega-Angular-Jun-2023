@@ -8,7 +8,8 @@ import { ClosedCountPipe } from './bugs/pipes/closedCount.pipe';
 import { BugStatsComponent } from './bugs/components/bug-stats/bug-stats.component';
 import { BugEditComponent } from './bugs/components/bug-edit/bug-edit.component';
 import { UtilsModule } from './utils/utils.module';
-
+import { ProjectsComponent } from './projects/projects.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,11 +18,13 @@ import { UtilsModule } from './utils/utils.module';
     BugStatsComponent,
     BugEditComponent,
     ClosedCountPipe,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UtilsModule
+    UtilsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
